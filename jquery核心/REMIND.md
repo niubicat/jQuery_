@@ -7,12 +7,12 @@
 
 #### 1、jQuery([selector,[context]]) 
 * 参数：	
-	* 1) selector,[context]
-	* 2) element
-	* 3) object
-	* 4) elementArray
-	* 5) jquery object
-	* 6) jquery() 
+	* 1）selector,[context]
+	* 2）element
+	* 3）object
+	* 4）elementArray
+	* 5）jquery object
+	* 6）jquery() 
 
 #### 2、jQuery(html,[ownerDocument]) [1.8+]
 * 参数： 	
