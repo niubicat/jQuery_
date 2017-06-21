@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<link rel="stylesheet" href="http://jquery.cuishifeng.cn/jQuery_selector_context.html">
+	<script src="./jquery-3.2.1.min.js"></script>
+	<style>
+		.demo1 {
+			width: 300px;
+			height: 400px;
+			background: #666;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo1">
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+		<p>4</p>
+		<p>5</p>
+		<input type="radio" />
+	</div>
+</body>
+<script>
+	$(function(){
+		// $(document.body).css("background", "red"); demo1
+		// $("div > p").css("background", "green");
+		// $("div > p").hide(); 隐藏 div 元素的所有p子元素。
+		// $("input:radio", document.forms[0]).hide(); 在文档的第一个表单中，查找所有的单选按钮(即: type 值为 radio 的 input 元素)。
+		// $("div", xml.responseXML); 在一个由 AJAX 返回的 XML 文档中，查找所有的 div 元素。
+	})
+
+</script>
+</html>

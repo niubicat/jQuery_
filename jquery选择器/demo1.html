@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<span id="foo:bar">1</span>
+<span id="foo[bar]">2</span>
+<span id="foo.bar">3</span>
+<script>
+	$(function() {
+		$("#foo\\[bar\\]").text("hello world");
+	});
+</script>
+</body>
+</html>

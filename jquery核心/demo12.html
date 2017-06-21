@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div>111</div>
+	<p>222</p>
+	<span data-test="this is test">333</span>
+	<script>
+		jQuery(function($) {
+			$("div").data("blah");
+			$("div").data("blah", "hello");
+			$("div").data("blah", 86);
+			$("div").data("blah");
+			$("div").removeData("blah");
+			$("div").data("blah");
+
+			$("p").data("test", {first: 16, last: "pizzal"});
+			$("p").data("test").first;
+			console.log($("p").data("test").last);
+
+			console.log($("span").data("test"));
+		});
+	</script>
+</body>
+</html>

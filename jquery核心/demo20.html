@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<script>
+		//example1
+		// 将$引用的对象映射回原始的对象
+		jQuery.noConflict();
+		// 使用jQuery
+		jQuery("div p").hide();
+		// 使用其它库的$()
+		$("content").style.display = "none";
+
+		//example2
+		//恢复使用别名$，然后创建并执行一个函数，在这个函数的作用域中仍然将$作为jQuery的别名来使用。
+		//在这个函数中，原来的$对象是无效的
+		jQuery.noConflict();
+		(function($) {
+			$(function() {
+				// 使用 $ 作为 jQuery 别名的代码
+			});
+		})(jQuery);
+
+		//example3
+		//创建一个新的别名用以在接下来的库中使用jQuery对象
+		var j = jQuery.noConflict();
+		// 基于jQuery的代码
+		j("div p").hide();
+		//基于其它库的$()代码
+		$("content").style.display = "none";
+
+		//example4
+		//完全将 jQuery 移到一个新的命名空间
+		var dom = {};
+		dom.query =  jQuery.noConflict(true);
+		// 新的jQuery代码
+		dom.query("div p").hide();
+		// 另一个库$()代码
+		$("content").style.display = "none";
+		// 另一版本的jQuery代码
+		jQuery("div > p").hide();
+
+	</script>
+</body>
+</html>

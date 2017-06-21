@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+	<input type="button" class="demo2" value="点我"></input>
+	<form></form>
+<script>
+	$(".demo2").click(function(){
+		$("<div><p>Hello</p></div>").appendTo("body");
+		// 在 IE 中无效
+		$("<input>").attr("type", "checkbox").appendTo("body");
+		// 在 IE 中有效
+		$("<input type='checkbox'>").appendTo("body");
+		$("<input>", {
+			type: "text",
+			value: "text",
+			focusin: function() {
+				$(this).addClass("active");
+			},
+			focusout: function() {
+				$(this).removeClass("active");
+			}
+		}).appendTo("form");
+		$("<div></div>", {
+			class: "text",
+			text: "Click me!",
+			click: function(){
+				$(this).toggleClass("test")
+			}
+		}).appendTo("body");
+	});
+</script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<style>
+		ul,li {
+			list-style: none;
+		}
+	</style>
+	<div id="foo">
+		<ul class="demo8">
+			<li>item</li>
+		</ul>
+		<ul>
+			<li>item</li>
+		</ul>
+	</div>
+	<div class="good">
+	</div>
+	<script>
+		$(document).ready(function() {
+			$(".good").append("<li>" + $("ul").selector + "</li>");
+			$("ul")
+				.append("<li>" + $("ul").selector + "</li>")
+				.append("<li>" + $("ul li").selector + "</li>")
+				.append("<li>" + $("div#foo ul:not([class])").selector + "</li>");
+		});
+	</script>
+</body>
+</html>

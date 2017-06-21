@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<input type="checkbox">
+<input type="checkbox">
+<span>22222</span>
+<script>
+	jQuery.fn.extend({
+		a: function() {
+			this.each(function() { 
+				$(this).attr("checked", true);
+			});
+		},
+		b: function() {
+			this.each(function() { 
+				$(this).attr("checked", false);  
+			});
+		}
+	});
+
+	$("span").click(function() {
+		if($("input").attr("checked") == "checked") {
+			$("input[type=checkbox]").b();
+		}else {
+			$("input[type=checkbox]").a();
+		}
+		
+	});
+	
+</script>
+</body>
+</html>

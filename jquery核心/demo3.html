@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script>
+$(function(){
+	$("<div></div>", {
+		text: "click me1"
+	}).appendTo("body");
+});
+$(document).ready(function() {
+	$("<div></div>", {
+		text: "click me2"
+	}).appendTo("body");
+});
+jQuery(function() {
+	$("<div></div>", {
+		text: "click me3"
+	}).appendTo("body");
+});
+</script>
+</body>
+</html>

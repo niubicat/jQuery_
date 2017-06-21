@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<style>
+		ul,li {
+			list-style: none;
+		}
+	</style>
+	<ul>
+		<li id="foo">foo</li>
+		<li id="bar">bar</li>
+		<li id="baz">baz</li>
+	</ul>
+	<script>
+		$(document).ready(function() {
+			var a = $("li").index(document.getElementById("bar"));
+			var b = $("li").index($("#bar"));
+			var c = $("li").index($("li:gt(0)"));
+			var d = $("#bar").index("li");
+			var e = $("#bar").index();
+			console.log(a,b,c,d,e);
+		});
+	</script>
+</body>
+</html>

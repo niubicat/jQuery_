@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div>123</div>
+	<script>
+		$(document).ready(function() {
+			$("div").data("greenting", {first: 22, last: "pizzal"});
+			$("div").data("man", "hello world");
+			console.log($("div").data("greenting").first);
+			console.log($("div").data("man"));
+			$("div").removeData(["greenting", "man"]);
+			console.log("Greenting is:" + $("div").data("greenting"));
+			console.log("man is:" + $("div").data("man"));
+		});
+	</script>
+</body>
+</html>

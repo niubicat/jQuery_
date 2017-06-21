@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div>3434</div>
+	<script>
+		jQuery.extend({
+			min: function(a, b) { return a < b ? a : b; },
+			max: function(a, b) { return a > b ? a : b; }
+		});
+		$(document).ready(function() {
+			console.log(jQuery.min(2, 3));
+			console.log(jQuery.max(4, 5));
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<section>选择文档中所有图像作为元素数组，并用数组内建的 reverse 方法将数组反向。</section>
+	<div class="test1">1</div>
+	<div class="test2">2</div>
+	<script>
+		$(document).ready(function() {
+			console.log($("div").get(0));
+			console.log($("div").get().reverse());
+		});
+	</script>
+</body>
+</html>

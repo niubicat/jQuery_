@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<style>
+	div {
+		margin: 3px;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		left: 0;
+		top: 40px;
+		background: green;
+		display: none;
+	}
+	div.newcolor {
+		background: blue;
+	}
+	span {
+		color: red;
+	}
+
+	.demo15 {
+		margin: 3px;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		left: 0;
+		top: 100px;
+		background: green;
+		display: none;
+	}
+</style>
+<p>队列长度是：<span></span></p>
+<div class="que"></div>
+
+<div class="demo15"></div>
+<input  id="start" type="button" value="start">
+<input  id="stop" type="button" value="stop">
+
+
+<script>
+	$(document).ready(function() {
+		// example1
+		function len() {
+			var n = $(".que").queue("fx");
+			$("span").text("Queue length is:" + n.length);
+			setTimeout(len, 100);
+		}
+
+		function runIt() {
+			$(".que").show("slow");
+			$(".que").animate({left: "+=200"}, 2000);
+			$(".que").slideToggle(1000);
+			$(".que").slideToggle("fast");
+			$(".que").animate({left: "-=200"}, 1500);
+			$(".que").hide("slow");
+			$(".que").show(1200);
+			$(".que").slideUp("normal", runIt);
+		}
+
+		runIt();
+		len();
+
+		// example2
+		$("#start").click(function() {
+			$(".demo15").show("slow");
+			$(".demo15").animate({left: "+=200"}, 3000);
+			$(".demo15").queue(function() {
+				$(this).addClass("newcolor");
+				$(this).dequeue();
+			});
+			$(".demo15").animate({left: "-=200"}, 1500);
+			$(".demo15").queue(function() {
+				$(this).removeClass("newcolor");
+				$(this).dequeue();
+			});
+			$(".demo15").slideUp();
+		});
+		$("#stop").click(function() {
+			$(".demo15").queue("fx", []);
+			$(".demo15").stop();
+		})
+	});
+</script>
+</body>
+</html>
