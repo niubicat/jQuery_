@@ -1,23 +1,32 @@
-** http://jquery.cuishifeng.cn/jQuery_html_ownerDocument.html **
-** http://www.css88.com/jqapi-1.9/ **
-** https://oscarotero.com/jquery/ **
-** http://www.365mini.com/diy.php?f=jquery-selector-demo ** 
+* [*jQuery API 中文文档*](http://jquery.cuishifeng.cn/jQuery_html_ownerDocument.html)
+* [*jQuery API*](http://www.css88.com/jqapi-1.9/)
+* [*jQuery Quick API Reference 3.0*](https://oscarotero.com/jquery/)
+* [*jquery-demo在线*](http://www.365mini.com/diy.php?f=jquery-selector-demo)
+
 ### 一、核心部分
-####1、jQuery([selector,[context]]) 
-参数：	1) selector,[context]
-		2) element
-		3) object
-		4) elementArray
-		5) jquery object
-		6) jquery() 
-####2、jQuery(html,[ownerDocument]) [1.8+]
-参数： 	1）html,[ownerDocument]
-		2）html,props
-####3、jQuery(callback) == $(document).ready()的简写
-参数：	1）callback
-####4、jQuery.holdReady(hold) 暂停或恢复.ready() 事件的执行 [3.2-]
-参数：	1）true
-		2) false
+
+#### 1、jQuery([selector,[context]]) 
+* 参数：	
+	* 1) selector,[context]
+	* 2) element
+	* 3) object
+	* 4) elementArray
+	* 5) jquery object
+	* 6) jquery() 
+
+#### 2、jQuery(html,[ownerDocument]) [1.8+]
+* 参数： 	
+	* 1）html,[ownerDocument]
+	* 2）html,props
+
+#### 3、jQuery(callback) == $(document).ready()的简写
+* 参数：	
+	* 1）callback
+
+#### 4、jQuery.holdReady(hold) 暂停或恢复.ready() 事件的执行 [3.2-]
+* 参数：	
+	* 1）true
+	* 2) false
 ####5、each(callback) 以每一个匹配的元素作为上下文来执行一个函数
 参数：	1）callback/Function
 可以使用 'return false' 来提前跳出 each() 循环。
@@ -83,11 +92,4 @@
 参数：	1）extreme 
 			true/false
 			传入 true 来允许彻底将jQuery变量还原
-
-
-
-
-
-
-
 
