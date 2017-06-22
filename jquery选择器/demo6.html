@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<form action="xxx.php">
+		<label for="name">Name:</label>
+		<input id="name" type="text" name="name">
+		<fieldset>
+			<legend>newsletter</legend>
+			<label for="newsletter">Newsletter:</label>
+			<input id="newsletter" type="text" name="newsletter">
+		</fieldset>
+	</form>
+	<input type="text" name="none">
+
+	<script>
+		$(document).ready(function() {
+			console.log($("form input"));
+		});
+	</script>
+</body>
+</html>

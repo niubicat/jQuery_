@@ -19,9 +19,9 @@
 	* 1）html,[ownerDocument]
 	* 2）html,props
 
-#### 3、jQuery(callback) == $(document).ready()的简写
+#### 3、jQuery(callback) == $(document).ready()的简写，允许你绑定一个在DOM文档载入完成后执行的函数
 * 参数：	
-	* 1）callback
+	* 1）callback 当DOM加载完成后要执行的函数
 
 #### 4、jQuery.holdReady(hold) 暂停或恢复.ready() 事件的执行 [3.2-]
 * 参数：	

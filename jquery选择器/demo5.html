@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery核心</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div>div</div>
+<p class="myClass">p class="myClass"</p>
+<span>span</span>
+<p class="notMyClass">p class="notMyClass"</p>
+<script>
+	$(function() {
+		console.log($("div,span,p.myClass"));
+	})
+</script>
+</body>
+</html>

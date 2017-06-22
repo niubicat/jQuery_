@@ -35,5 +35,7 @@ http://www.cnblogs.com/xcsn/archive/2013/08/14/3258035.html
 https://my.oschina.net/u/1251846/blog/191367
 http://www.tuicool.com/articles/UjAnYrE
 http://www.cnblogs.com/lccjob/p/4739242.html
+#### 2D/3D 转换，Super-smooth CSS3 transformations and transitions
+https://github.com/rstacruz/jquery.transit
 
 
