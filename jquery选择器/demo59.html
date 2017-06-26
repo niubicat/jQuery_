@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery选择器</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<form>
+    <input type="checkbox" name="newsletter" checked="checked" value="Daily" />
+    <input type="checkbox" name="newsletter" value="Weekly" />
+    <input type="checkbox" name="newsletter" checked="checked" value="Monthly" />
+    <input type="radio" checked="checked" />
+    <input type="radio" />
+    <selet>
+        <option value="212">33</option>
+        <option value="23232" selected="selected">455</option>
+        <option value="24552">111</option>    
+    </selet>
+</form>
+<script>
+    $(function() {
+        $("input:checked").css("background", "yellow");
+    })
+</script>
+</body>
+</html>

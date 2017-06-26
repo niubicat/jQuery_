@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery选择器</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <form action="xxx.php" method="get">
+        <select>
+            <option value="1">Flowers</option>
+            <option value="2" selected="selected">Gardens</option>
+            <option value="3">Trees</option>
+        </select>
+    </form>
+    <script>
+        $(function() {
+            $("select option:selected").css("background", "yellow");
+        })
+    </script>
+</body>
+</html>

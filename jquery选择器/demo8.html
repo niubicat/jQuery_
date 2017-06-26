@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery选择器</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<form action="xx.php">
+  <label for="name">Name:</label>
+  <input id="name" type="text" name="name" />
+  <fieldset>
+  	<legend>Newsletter</legend>
+      <label for="newsletter">Newsletter:</label>
+      <input id="newsletter" type="text" name="newsletter" />
+      <input id="hello" type="text" name="hello">
+ </fieldset>
+</form>
+<input type="text" name="none" />
+
+<script>
+	$(document).ready(function() {
+		console.log($("label + input"));
+	})
+</script>
+</body>
+</html>

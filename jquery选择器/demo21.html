@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery选择器</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <style>
+        .focused {
+            background: yellow;
+        }
+    </style>
+    <div id="content">
+        <input type="text" tabIndex="1">
+        <input type="text" tabIndex="2">
+        <select name="menu" id="menu" tabIndex="3">
+            <option value="">select menu</option>
+        </select>
+        <div tabIndex="4">
+            a div
+        </div>
+    </div>
+    <script>
+        $("#content").delegate("*", "focus blur", function() {
+            var elem = $(this);
+            setTimeout(function() {
+                elem.toggleClass("focused", elem.is(":focus"));
+            }, 0);
+        });
+    </script>
+</body>
+</html>

@@ -6,13 +6,16 @@
 	<script src="./jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<span id="foo:bar">1</span>
-<span id="foo[bar]">2</span>
-<span id="foo.bar">3</span>
+<table>
+	<tr><td>Header 1</td></tr>
+	<tr><td>Value 1</td></tr>
+	<tr><td>Value 2</td></tr>
+</table>
+
 <script>
-	$(function() {
-		$("#foo\\[bar\\]").text("hello world");
-	});
+	$(document).ready(function() {
+		console.log($("tr:odd"));
+	})
 </script>
 </body>
 </html>

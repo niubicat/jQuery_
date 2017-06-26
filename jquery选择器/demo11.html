@@ -6,13 +6,12 @@
 	<script src="./jquery-3.2.1.min.js"></script>
 </head>
 <body>
-	<div>DIV1</div>
-	<div>DIV2</div>
-	<span>SPAN</span>
+	<input id="apple" type="checkbox" name="apple" checked="true">
+	<input id="flower" type="checkbox" name="flower">
 	<script>
-		$(document).ready(function() {
-			console.log($("div"));
-		});
+		$(function() {
+			console.log($("input:not(:checked)"));
+		})
 	</script>
 </body>
 </html>

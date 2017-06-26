@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery选择器</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <style>
+        ul, li {
+            list-style: none;
+        }
+    </style>
+<ul>
+    <li>John</li>
+    <li>Karl</li>
+    <li>Brandon</li>
+</ul>
+<ul>
+    <li>Glen</li>
+    <li>Tane</li>
+    <li>Ralph</li>
+</ul>
+
+<script>
+    $(function() {
+        $("ul li:last-child").css("background", "yellow");
+    })
+</script>
+</body>
+</html>

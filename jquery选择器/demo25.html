@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery选择器</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <style>
+        td {
+            width: 40px;
+            height: 20px;
+            border: 1px solid #666;
+            font-size: 12px;
+        }
+    </style>
+    <table>
+        <tr>
+            <td>Value 1</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Value 2</td>
+            <td></td>
+        </tr>
+    </table>
+<script>
+    $(function() {
+        $("td:empty").css("background", "yellow");
+    })
+</script>
+</body>
+</html>

@@ -6,13 +6,15 @@
 	<script src="./jquery-3.2.1.min.js"></script>
 </head>
 <body>
-	<div>DIV1</div>
-	<div>DIV2</div>
-	<span>SPAN</span>
-	<script>
-		$(document).ready(function() {
-			console.log($("div"));
-		});
-	</script>
+<table>
+	<tr><td>Header 1</td></tr>
+	<tr><td>Value 1</td></tr>
+	<tr><td>Value 2</td></tr>
+</table>
+<script>
+	$(function() {
+		console.log($("tr:gt(0)"));
+	})
+</script>
 </body>
 </html>

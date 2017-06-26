@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery选择器</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div id="n1">
+    <div id="n2" class="abc">
+        <label id="n3">label1</label>
+        <span id="n4">span1</span>
+        <span id="n5" class="abc">span2</span>
+        <span id="n6">span3</span>
+    </div>
+    <div id="n7">
+        <span id="n8" class="abc">span1</span>
+        <span id="n9">span2</span>
+    </div>
+</div>
+
+<div id="g1">
+    <div id="g2" class="abc">
+        <label id="g3">label1</label>
+        <span id="g4">span1</span>
+        <span id="g5" class="abc">span2</span>
+        <span id="g6">span3</span>
+    </div>
+    <div id="g7">
+        <span id="g8" class="abc">span1</span>
+        <span id="g9">span2</span>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        $("span:first-of-type").css("background", "yellow");
+        $(".abc:first-of-type").attr("name","first");
+    })
+</script>
+</body>
+</html>
