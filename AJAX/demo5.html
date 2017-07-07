@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<button id="go">» Run</button>
+<div class="block"></div>
+<script>
+    $(function() {
+        jQuery.getScript("http://dev.jquery.com/view/trunk/plugins/color/jquery.color.js", function(){
+            $("#go").click(function(){
+                $(".block").animate( { backgroundColor: 'pink' }, 1000)
+                .animate( { backgroundColor: 'blue' }, 1000);
+            });
+        });
+    })
+</script>
+</body>
+</html>

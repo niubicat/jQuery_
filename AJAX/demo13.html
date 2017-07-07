@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX</title>
+	<script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <script>    
+        $(function() {
+            // 指定预处理参数选项的函数
+            $.ajaxPrefilter( function(options, originalOptions, jqXHR){
+                // options对象 包括accepts、crossDomain、contentType、url、async、type、headers、error、dataType等许多参数选项
+                // originalOptions对象 就是你为$.ajax()方法传递的参数对象，也就是 { url: "/index.php" }
+                // jqXHR对象 就是经过jQuery封装的XMLHttpRequest对象(保留了其本身的属性和方法)
+
+                options.type = "GET"; // 将请求方式改为GET
+                options.headers = { }; // 清空自定义的请求头
+            });
+
+
+            // 执行AJAX请求
+            $.ajax( {
+                url: "/index.php"
+            } );
+        })
+    </script>
+</body>
+</html>
