@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <input class="items" type="text" value="hello">
+    <input class="hdh" type="text" value="hdh">
+    <input class="idi" type="text" value="hdh">
+    
+    <select name="single" id="single">
+        <option value="single1">single1</option>
+        <option value="single2">single2</option>
+    </select>
+    <select name="multiple" id="multiple" multiple="multiple">
+        <option value="multiple1" selected="selected">multiple1</option>
+        <option value="multiple2">multiple2</option>
+        <option value="multiple3">multiple3</option>
+    </select>
+    <br/>
+    <input type="checkbox" value="check1">check1
+    <input type="checkbox" value="check2">check2
+    <input type="radio" value="radio1">radio1
+    <input type="radio" value="radio2">radio2
+    <script>
+        $(function() {
+            console.log($("input").val());
+            // $("input").val("hello world!");
+
+            $("input:text.items").val(function() {
+                return this.value + '' + this.className;
+            })
+
+            $("#single").val("Single2");
+            $("#multiple").val(["Multiple2", "Multiple3"]);
+            $("input").val(["check2", "radio1"]);
+        })
+    </script>
+</body>
+</html>

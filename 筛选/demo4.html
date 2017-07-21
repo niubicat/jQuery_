@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛选</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<style>
+    div {
+        position: relative;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        border: 1px solid #666;
+    }
+</style>
+<div class="protected"></div><div></div>
+<script>
+    'use strict';
+    $(function () {
+        $("div").click(function () {
+            if ($(this).hasClass("protected")) {
+                $(this)
+                    .animate({ left: -10 })
+                    .animate({ left: 10 })
+                    .animate({ left: -10 })
+                    .animate({ left: 10 })
+                    .animate({ left: 0 });
+            }
+        })
+    })
+</script>
+<script src="http://192.168.0.102:8081/target/target-script-min.js#anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+     <style>
+    .demo {
+        border:1px solid black;
+        width:250px;
+        height:500px;
+        overflow: auto;
+    }
+    </style>
+    <div>
+        <p>Hello</p>
+        <p>2nd Paragraph</p>
+    </div>
+
+    <div class="demo">
+        <div>
+            dhdhdhiririiririririrjdjjdjdjdjdjjdjdjdjdjdjdjdh
+            dhdhiririiririririrjdjjdjdjdjdjjdjdjdjdjdjdj
+            dhdhdhiririiririririrjdjjdjdjdjdjjdjdjdjdjdjdjdhdh
+            dhiririiririririrjdjjdjdjdjdjjdjdjdjdjdjdj
+            dhdhdhiririiririririrjdjjdjdjdjdjjdjdjdjdjdjdj
+            dhdhdhiririiririririrjdjjdjdjdjdjjdjdjdjdjdjdj
+            dhdhdhiririiririririrjdjjdjdjdjdjjdjdjdjdjdjdj
+        </div>
+    </div>
+    <script>
+        $(function() {
+            var p = $("p:first");
+            $("p:last").text( "scrollTop:" + p.scrollTop() );
+            $(".demo").scrollLeft(100);
+            console.log($("div.demo").scrollLeft());
+        })
+    </script>
+</body>
+</html>

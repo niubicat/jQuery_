@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <style>
+    ul,li {
+        list-style: none;
+    }
+    </style>
+    <ul>
+      <li>Hello</li>
+      <li class="world">Hello</li>
+      <li class="hello">Hello</li>
+</ul>
+    <p>nimei</p>
+    <div class="br">
+        <div class="foo">hdh</div>
+    </div>
+    <div class="bb">
+        <div class="foo">ldk</div>
+    </div>
+<script>
+    $(function() {
+         $("ul li:last").addClass(function() {
+             return $(this).prev().attr("class");
+         })
+
+         $("ul li:last").toggleClass("gg", true)
+
+         var count = 0;
+         $("p").click(function() {
+             $(this).toggleClass("highthight", count++ % 3 == 0);
+         })
+
+         $("div.foo").toggleClass(function() {
+             if ($(this).parent().is(".br")) {
+                 return "happy";
+             } else {
+                 return "sad";
+             }
+         })
+    })
+</script>
+</body>
+</html>

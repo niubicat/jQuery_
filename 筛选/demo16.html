@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛选</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <dl>
+        <dt id="item1">item1</dt>
+        <dd>def 1-a</dd>
+        <dd>def 1-b</dd>
+        <dd>def 1-c</dd>
+        <dd>def 1-d</dd>
+        <dt id="item2">item2</dt>
+        <dd>def 2-a</dd>
+        <dd>def 2-b</dd>
+        <dd>def 2-c</dd>
+        <dt id="item3">item3</dt>
+        <dd>def 3-a</dd>
+        <dd>def 3-b</dd>
+    </dl>
+    <script>
+        $(function () {
+            $("#item2").nextUntil("dt").css("background", "red");
+            var item3 = document.getElementById("item3");
+            $("#item1").nextUntil(item3, "dd").css("color", "green");
+        })
+    </script>
+</body>
+</html>

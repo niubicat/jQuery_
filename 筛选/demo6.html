@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛选</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div><label for="hello">电话号码</label><input type="text" id="hello"></div>
+<ul>
+    <li><strong>list</strong> item 1 - one strong tag</li>
+    <li><strong>list</strong> item <strong>2</strong> - two <span>strong tags</span></li>
+    <li>list item 3</li>
+</ul>
+<script>
+    'use strict';
+    $(document).ready(function () {
+        var tel = $("input[type='text']").parent().is("form");
+        console.log(tel);
+        $("li").click(function () {
+            var $li = $(this),
+                isWithTwo = $li.is(function () {
+                    return $("strong", this).length == 2;
+                });
+
+            if (isWithTwo) {
+                $li.css("background", "green");
+            } else {
+                $li.css("background", "red");
+            }
+        });
+    })
+</script>
+</body>
+</html>

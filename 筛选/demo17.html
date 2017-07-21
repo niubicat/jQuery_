@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛选</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div style="width:70%; position:absolute; left:100px; top:100px;">
+        <div style="margin: 50px; background-color: yellow;">
+            <p>点击下面的按钮可以设置本段落的最近的父（祖先）元素的背景色。</p>
+        </div>
+    </div>
+    <input type="button" value="点我" />
+    <script>
+    $(function () {
+        $("input[type='button']").click(function () {
+            $("p").offsetParent().css("background", "red");
+        })
+    })
+</script>
+</body>
+</html>

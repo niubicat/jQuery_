@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div class="world"><b>nihao</b></div>
+    <a class="hello"></a>
+
+    <div class="world1"><b>nihao</b></div>
+    <a class="hello1"></a>
+
+    <p>899</p>
+    <span>jf</span>
+    <span>ei</span>
+    <span>388</span>
+    <script>
+    $(function() {
+        $($("div.world").html()).appendTo($(".hello"));
+        // $($("div.world1").text()).appendTo($(".hello1"));
+        
+        $("p").html("Hello <b>world</b>!");
+        $("span").html(function(n){
+            return "这个 span 元素的 index 是：" + n;
+        });
+    })
+    </script>
+</body>
+</html>

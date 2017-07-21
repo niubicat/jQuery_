@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <style>
+        .a {
+            color:blue;
+            width: 100px;
+            height: 100px;
+        }
+        .didi {
+            margin-top: 10px;
+            width: 200px;
+            height: 200px;
+            background: #666;
+        }
+    </style>
+    <p class="a">747477474</p>
+    <div class="didi">94848</div>
+    <div class="didi">shema</div>
+    
+    <script>
+        $(function() {
+            $("p").css({ "color": "#ff0011", "background": "blue" });
+        })
+
+        $("div").click(function() {
+            $(this).css({
+                width: function(index, value) {
+                    return parseFloat(value) * 1.2;
+                },
+                height: function(index, value) {
+                    return parseFloat(value) * 1.2;
+                }
+            })
+        })
+    </script>
+</body>
+</html>

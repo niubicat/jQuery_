@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛选</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p>Hello</p><p>Hello Again</p><p class="selected">And Again</p>
+<div><ol><li>Hello</li></ol></div>
+<div>How are you?</div>
+<div>
+    <ol>dii</ol>
+</div>
+<script>
+    'use strict';
+    $(function () {
+        $("p").filter(".selected");
+        $("p").filter(".selected, :first");
+        console.log($("p").filter(".selected"));
+
+        console.log(
+            $("div").filter(function () {
+                return $("ol", this).length == 0;
+            })
+        );
+    })
+</script>
+
+</body>
+</html>

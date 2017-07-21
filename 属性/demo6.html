@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <style>
+    ul,li {
+        list-style: none;
+    }
+    </style>
+    <ul>
+      <li>Hello</li>
+      <li class="world">Hello</li>
+      <li class="hello">Hello</li>
+</ul>
+    <span class="aaa">
+        1111
+    </span>
+    <span class="bbb aaa">
+        2222
+    </span>
+<script>
+    $(function() {
+         $("ul li:last").addClass(function() {
+             return $(this).prev().attr("class");
+         })
+
+         $("span:last").removeClass(function() {
+             return $(this).prev().attr("class");
+         })
+    })
+</script>
+</body>
+</html>

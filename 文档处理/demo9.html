@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文档处理</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <style>
+        p {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #666;
+        }
+        .http-equiv {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #666;
+        }
+    </style>
+    <p class="ddi">hdhid</p>
+    <div class="get">http-equiv</div>
+    <script>
+        $(function() {
+            $("p").wrap("<div class='wrap'></div>");
+            $('.get').wrap(function() {
+                return '<div class="' + $(this).text() + '"/>';
+            });
+        })
+    </script>
+</body>
+</html>

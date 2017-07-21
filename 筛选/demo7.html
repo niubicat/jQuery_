@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛选</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p><b>Value:</b></p>
+<div>
+    <label for="number1">name</label>
+    <input type="text" id="number1" name="name" value="John">
+    <label for="number2"></label>
+    <input type="text" id="number2" name="password" value="password">
+    <label for="number3"></label>
+    <input type="text" id="number3" name="url" value="http://ejohn.org/">
+</div>
+<script>
+    'use strict';
+    $(document).ready(function () {
+        $("p").append(function () {
+
+            var $input = $("input").map(function () {
+                return $(this).val();
+            });
+            return $input.get().join("; "); //  转化为Dom对象才能插入
+        });
+    });
+
+//    $(function () {
+//        $("p").append( $("input").map(function(){
+//            return $(this).val();
+//        }).get().join(", ") );
+//    });
+
+
+
+</script>
+</body>
+</html>

@@ -49,7 +49,8 @@
 * 参数：	
 	* 1）无
 
-#### 10、get([index]) 取得其中一个匹配的元素。 num表示取得第几个匹配的元素。从0开始，返回的是DOM对象，类似的有eq(index),不过eq(index)返回的是jQuery对象。
+#### 10、get([index]) 取得其中一个匹配的元素。 num表示取得第几个匹配的元素。
+    从0开始，返回的是DOM对象，类似的有eq(index),不过eq(index)返回的是jQuery对象。
 * 参数：	
 	* 1）[index]／选择一个实际的DOM 元素并且对他直接操作，而不是通过 jQuery 函数。$(this).get(0)与$(this)[0]等价
 

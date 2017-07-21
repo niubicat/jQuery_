@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文档处理</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <p>dd</p>
+    <p>aaa</p>
+    <p>fff</p>
+    <div class="container">
+        <div class="inner">Hello</div>
+        <div class="inner">Goodbye</div>
+    </div>
+<script>
+$(function() {
+    $("p").wrapInner("<b></b>");
+    $(".inner").wrapInner(function() {
+        return '<div class="' + $(this).text() + '"/>';
+    })
+})
+</script>
+</body>
+</html>

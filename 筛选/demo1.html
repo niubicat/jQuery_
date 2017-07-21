@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛选</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p> This is just a test.</p> <p> So is this</p>
+<script>
+    $(document).ready(function () {
+        $("p").eq(1);
+        console.log($("p").eq(1));
+        console.log($("p").eq(-2));
+    })
+</script>
+</body>
+</html>

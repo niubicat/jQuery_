@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛选</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <style>
+        ul, li {
+            list-style: none;
+        }
+    </style>
+    <div>
+        <p>hello1</p>
+        <p>world1</p>
+    </div>
+    <div>
+        <ul>
+            <li>
+                <p>hello2</p>
+                <p>world2</p>
+            </li>
+        </ul>
+       
+    </div>
+    <section><span>Hello meta</span></section><section class="selected"><span>Hello Again</span></section>
+    <script>
+        $(document).ready(function () {
+            $("p").parent();
+            console.log($("p").parent());
+            $("span").parent(".seleced");
+            console.log($("span").parent(".selected"));
+        })
+    </script>
+</body>
+</html>

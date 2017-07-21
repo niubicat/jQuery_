@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <p>dhdhh</p>
+    <p>dhdhh</p>
+    <p>dhdhh</p>
+    <p>dhdhh</p>
+    
+    <script>
+        $(function() {
+            $("p").text(function(n) {
+                return '这个 p 元素的 index 是：' + n;
+            })
+        })
+    </script>
+</body>
+</html>

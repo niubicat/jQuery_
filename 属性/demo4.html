@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    
+    <input action="hshsh" type="checkbox" >
+    <p> </p>
+    <script>
+        $(function() {
+            var $para = $("input");
+            $para.attr("luggageCode", "abc");
+            $para.prop("checked", "checked");
+            $para.prop("sa", "checked");
+
+            $para.append("The secret luggage code id: ", String($para.attr("luggageCode")), ".");
+ 
+            $para.removeProp("checked");  
+            $para.removeProp("sa");  
+
+            $para.append("Now the secret luggage code is: ", String($para.prop("checked")), ".");
+            
+
+            var $parb = $("p");
+            $parb.prop("luggageCode", 1234);
+            $parb.append("The secret luggage code is: ", String($parb.prop("luggageCode")), ". ");
+            $parb.removeProp("luggageCode");
+            $parb.append("Now the secret luggage code is: ", String($parb.prop("luggageCode")), ". ");
+            
+        })
+    </script>
+</body>
+</html>
