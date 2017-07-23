@@ -8,12 +8,16 @@
     <script src="./jquery-3.2.1.min.js"></script>
 </head>
 <body>
-    <p><span>Hello</span>, how are you?,<i><span>niubicat</span></i></p>
+    <style>
+        .before {
+            color:blue;
+        }
+    </style>
+    <div>1</div><div>2</div><div>3</div><div>4</div>
     <script>
         $(function () {
-            $("p").find("span"); 
-            console.log($("p").find("span"));
-        })
+            $('div:last').prevAll().addClass("before");
+        });
     </script>
 </body>
 </html>

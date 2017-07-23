@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛选</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <!-- <p>Hello</p><div><span>Hello Again</span></div><p>And Again</p> -->
+    <section><span>Hello</span></section><p class="selected">Hello Again</p><p>And Again</p>
+    <script>
+    $(function () {
+        // $("div").siblings(":not('script')");
+        // console.log($("div").siblings(":not('script')"));
+        $("section").siblings(".selected");
+        console.log($("section").siblings(".selected"));
+    })
+</script>
+</body>
+</html>

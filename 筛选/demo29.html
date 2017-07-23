@@ -8,12 +8,12 @@
     <script src="./jquery-3.2.1.min.js"></script>
 </head>
 <body>
-    <p><span>Hello</span>, how are you?,<i><span>niubicat</span></i></p>
-    <script>
-        $(function () {
-            $("p").find("span"); 
-            console.log($("p").find("span"));
-        })
-    </script>
+<p><span>Hello</span>,how are you?</p>
+<script>
+    $(function () {
+        $("p").find("span").end();
+        console.log($("p").find("span").end());
+    }) 
+</script> 
 </body>
 </html>

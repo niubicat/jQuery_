@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛选</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <p>Hello <a href="http://ejohn.org/">John</a>, how are you doing?</p>
+    <iframe src="/index-blank.html" width="300" height="100"></iframe>
+    <script>
+        $(function () {
+            $("p").contents().filter(function () { return this.nodeType != 1; }).wrap("<b/>"); // this指向dom元素
+            $("iframe")
+                .contents()
+                .find("body")
+                .append("I'm in an iframe!");
+        })
+    </script>
+</body>
+</html>

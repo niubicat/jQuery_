@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>筛选</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p>Hello</p><span>Hello Again</span>
+<section>Hello</section>
+<p>Hello</p><p><span id="a">Hello Again</span></p>
+<script>
+    $(function () {
+        $("span").add("p"); // 插入顺序按照文档顺序
+        // console.log($("span").add("p"));
+        $("section").add("<span>Again1</span>");
+        console.log($("section").add("<span>Again1</span>"));
+        $("p").add(document.getElementById("a"))
+    })
+</script>
+</body>
+</html>
