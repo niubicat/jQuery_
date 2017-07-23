@@ -265,7 +265,9 @@
     这包括在 Traversing 中任何返回一个jQuery对象的函数--'add', 'andSelf', 'children', 
     'filter', 'find', 'map', 'next', 'nextAll', 'not', 'parent', 'parents', 
     'prev', 'prevAll', 'siblings' and 'slice'--再加上 Manipulation 中的 'clone'。
-
+* 参数
+    * 1）无
+    
 
 
 
