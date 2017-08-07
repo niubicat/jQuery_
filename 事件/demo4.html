@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    
+<script>
+$("p").bind("click", function(){
+  alert( $(this).text() );
+});
+$('#foo').bind('mouseenter mouseleave', function() {
+  $(this).toggleClass('entered');
+});
+$("button").bind({
+  click:function(){$("p").slideToggle();},
+  mouseover:function(){$("body").css("background-color","red");},  
+  mouseout:function(){$("body").css("background-color","#FFFFFF");}  
+});
+function handler(event) {
+  alert(event.data.foo);
+}
+$("p").bind("click", {foo: "bar"}, handler)
+
+$("form").bind("submit", function() { return false; })
+$("form").bind("submit", function(event){
+  event.preventDefault();
+});
+$("form").bind("submit", function(event){
+  event.stopPropagation();
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <script>
+        $("p").undelegate();
+        $("p").undelegate( "click" )
+        var foo = function () {
+        //.....
+        };
+        //用delegate() 方法给click事件增加".whatever"命名空间
+        $("form").delegate(":button", "click.whatever", foo);
+        $("form").delegate("input[type='text']", "keypress.whatever", foo); 
+
+        // 用undelegate()方法删除delegate()方法增加的".whatever"命名空间
+        $("form").undelegate(".whatever");
+    </script>
+</body>
+</html>

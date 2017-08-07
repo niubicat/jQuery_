@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div style="background:red">nime</div>
+<p>这是一个段落</p>
+<button>请点击这里</button>
+<table>
+    <td>nihao</td>
+</table>
+<script>
+    $("div").delegate("button", "click", function () {
+        $("p").slideToggle();
+    })
+
+    delegate这个方法可作为live()方法的替代，使得每次事件绑定到特定的DOM元素。
+    $("table").delegate("td", "hover", function(){
+        $(this).toggleClass("hover");
+    });
+    $("table").each(function(){
+        $("td", this).live("hover", function(){
+            $(this).toggleClass("hover");
+        });
+    });
+
+</script>
+</body>
+</html>

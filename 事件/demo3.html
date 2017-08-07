@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p>
+    niuhao
+    <span>nnnn</span>
+</p>
+<section>moms</section>
+<form action="xxx.php">
+    <button class="validator">validator</button>
+    <button class="ca">ca</button>    
+</form>
+<script>
+    $("p").delegate("span", "click", function() {
+        alert("111");
+    })
+    // Remove all event handlers from all paragraphs
+    // $("p").off("click");
+
+    // Remove all delegated click handlers from all paragraphs
+    $("p").off( "click", "**" ); // $(selector).delegate(selector1,eventtype(类型click等) 父子元素指派事件
+    // Remove just one previously bound handler by passing it as the third argument
+    var foo = function () {
+        alert("kdkkd");
+    }
+    $("body").on("click", "section", foo);
+    $("body").off("click", "section", foo); 
+    // Unbind all delegated event handlers by their namespace
+    var validate = function () {
+            alert("jdjj");
+    }
+    var ca = function () {
+            alert("ca");
+    }
+    // delegate events under the ".validator" namespace
+    $("form").on("click", "button", validate);
+    $("form").on("click", "button", ca);
+    $("form").on("keypress.validator", "input[type='text']", validate); 
+    // remove event handlers in the ".validator" namespace
+    $("form").off(".validator");
+</script>
+</body>
+</html>

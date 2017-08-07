@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div class="clickme">click me!</div>
+    <p>click me</p>
+    <script>
+        $(".clickme").bind("click", function () {
+            alert("bound handler called!");
+        })
+        // $('.clickme').live('click', function() {
+        //     alert("Live handler called."); 
+        // });
+        $("body").append("<div class='clickme'>another one!</div>");
+        $("p").live("click", function() { return false; });
+        $("p").live("click", function (event) {
+            event.preventDefault();
+        })
+    </script>
+</body>
+</html>

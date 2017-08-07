@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <style>
+    .hover {
+        color:red;
+    }
+    </style>
+    <table>
+        <td>你好</td>
+    </table>
+    <div class="nihao">zaima</div>
+    <script>
+        $("td").hover(
+            function () {
+                $(this).addClass("hover");
+            },
+            function () {
+                $(this).removeClass("hover");
+            }
+        );
+        function handlerInOut() {
+            alert("1111");
+        }
+        // $(".nihao").bind("mouseenter mouseleave", handlerInOut);
+        $(".nihao").hover(handlerInOut);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <p>jsjj</p>
+    <section>nnmm</section>
+    <script>
+        // $("form;first").trigger("submit");
+        // $("p").click(function (event, a, b) {
+        //     alert(a + b);
+        // }).trigger("click", ["foo", bar: "bar"]);
+        $("p").on("click", {foo: "foo", bar: "bar"}, function (event) {
+            alert(event.data.foo + event.data.bar)
+        });
+        
+        $("section").bind("myEvent", function (event, message1, message2) {
+            alert(message1 + ' ' + message2);
+        });
+        $("section").trigger("myEvent", ["Hello","World!"]);
+    </script>
+</body>
+</html>

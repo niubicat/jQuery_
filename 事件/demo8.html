@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <script>
+        // 把所有段落的所有事件取消绑定
+        $("p").unbind()
+        // 将段落的click事件取消绑定
+        $("p").unbind( "click" )
+        // 删除特定函数的绑定，将函数作为第二个参数传入
+        var foo = function () {
+        // 处理某个事件的代码
+        };
+
+        $("p").bind("click", foo); // ... 当点击段落的时候会触发 foo 
+
+        $("p").unbind("click", foo); // ... 再也不会被触发 foo
+    </script>
+</body>
+</html>

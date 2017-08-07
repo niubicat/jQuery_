@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p>nihao</p>
+<div>nimei</div>  
+<script>
+    $("p").on("click", function() {
+        alert($(this).text());
+    })
+    function myhandler(event) {
+        alert(event.data.foo);
+    }
+    $("div").on("click", {foo: "bar"}, myhandler);
+    // 取消按钮默认事件
+    $("form").on("submit", false);
+    // 阻止按钮默认事件
+    $("form").on("submit", function(event) {
+        event.preventDefault();
+    });
+    $("form").on("submit", function(event) {
+        event.stopPropagation();
+    });
+</script>
+</body>
+</html>
