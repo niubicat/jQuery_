@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script>
+    // 在服务器端记录JavaScript错误日志
+    $(window).error(function () {
+        jQuery.post("jsxxx.php", {msg:msg, url: url, line: line})
+    })
+    // 隐藏JavaScript错误
+    $(window).error(function () {
+        return true;
+    })
+    // 给你IE的用户隐藏无效的图像
+    $("img").error(function () {
+        $(this).hide();
+    })
+</script>
+</body>
+</html>

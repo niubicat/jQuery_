@@ -311,7 +311,95 @@
 
 #### 19、error([[data],fn]) 当元素遇到错误（没有正确载入）时，发生 error 事件。
     这个函数会调用所有绑定到error事件上的函数，包括在对应元素上的浏览器默认行为。
-    
+    可以通过在某个绑定的函数中返回false来防止触发浏览器的默认行为。
+    error事件通常可以在元素由于点击或者tab导航失去焦点时触发。
+
+    对于error事件，没有一个公众的标准。在大多数浏览器中，当页面的JavaScript发生错误时，window对象会触发error事件;
+    当图像的src属性无效时，比如文件不存在或者图像数据错误时，也会触发图像对象的error事件。
+
+    如果异常是由window对象抛出，事件处理函数将会被传入三个参数：
+    1、描述事件的信息 ("varName is not defined", "missing operator in expression", 等等.)
+    2、包含错误的文档的完整URL
+    3、异常发生的行数 如果事件处理函数返回true，则表示事件已经被处理，浏览器将认为没有异常。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的error事件中绑定的处理函数。
+    * 2）[data],fn
+        data:error([Data], fn) 可传入data供函数fn处理
+        fn:在每一个匹配元素的error事件中绑定的处理函数。
+
+#### 20、focus([[data],fn]) 当元素获得焦点时，触发 focus 事件
+    可以通过鼠标点击或者键盘上的TAB导航触发。
+    这将触发所有绑定的focus函数，注意，某些对象不支持focus方法。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的focus事件中绑定的处理函数。
+    * 2）[data],fn
+        data:focus([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的focus事件中绑定的处理函数。
+
+#### 21、focusin([data],fn) 当元素获得焦点时，触发 focusin 事件。
+    focusin事件跟focus事件区别在于，他可以在父元素上检测子元素获取焦点的情况。
+* 参数：
+    * 1）fn 在每一个匹配元素的focusin事件中绑定的处理函数
+    * 2）[data],fn
+        data:focusin([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的focusin事件中绑定的处理函数。
+
+#### 22、focusout([data],fn) 当元素失去焦点时触发 focusout 事件
+    focusout事件跟blur事件区别在于，他可以在父元素上检测子元素失去焦点的情况。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的focusout事件中绑定的处理函数。
+    * 2）[data],fn
+        data:focusout([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的focusout事件中绑定的处理函数
+
+#### 23、keydown([[data],fn]) 当键盘或按钮被按下时，发生 keydown 事件
+    注释：如果在文档元素上进行设置，则无论元素是否获得焦点，该事件都会发生。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的keydown事件中绑定的处理函数。
+    * 2）[data],fn
+        data:keydown([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的keydown事件中绑定的处理函数。
+
+#### 24、keypress([[data],fn]) 当键盘或按钮被按下时，发生 keypress 事件。
+    keypress 事件与 keydown 事件类似。当按钮被按下时，会发生该事件。
+    它发生在当前获得焦点的元素上。
+    不过，与 keydown 事件不同，每插入一个字符，就会发生 keypress 事件。
+    注释：如果在文档元素上进行设置，则无论元素是否获得焦点，该事件都会发生。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的keypress事件中绑定的处理函数。
+    * 2）[data],fn
+        data:keypress([Data], fn) 可传入data供函数fn处理
+        fn:在每一个匹配元素的keypress事件中绑定的处理函数。
+
+#### 25、keyup([[data],fn]) 当按钮被松开时，发生 keyup 事件。
+    它发生在当前获得焦点的元素上。  
+    注释：如果在文档元素上进行设置，则无论元素是否获得焦点，该事件都会发生。
+* 参数：
+    * 1）fn 
+        在每一个匹配元素的keyup事件中绑定的处理函数。
+    * 2）[data],fn
+        data:keyup([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的keyup事件中绑定的处理函数。
+
+#### 26、mousedown([[data],fn]) 当鼠标指针移动到元素上方，并按下鼠标按键时，会发生 mousedown 事件。
+    mousedown 与 click 事件不同，mousedown 事件仅需要按键被按下，而不需要松开即可发生。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的mousedown事件中绑定的处理函数。
+    * 2）[data],fn
+        data:mousedown([Data], fn) 可传入data供函数fn处理
+        fn:在每一个匹配元素的mousedown事件中绑定的处理函数
+
+#### 27、
+
+
+
+
 
 
 
