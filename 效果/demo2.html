@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<p>你好</p>
+<button>click me</button>
+<div style="display: block">Hello</div>
+<script>
+    $("button").click(function () {
+        $("p").hide("slow");
+        $("div").hide(4000,function(){
+            alert("Animation Done...");
+        });
+    })
+    
+</script>
+</body>
+</html>

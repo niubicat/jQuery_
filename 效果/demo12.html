@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>效果</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div class="hah" style="background-color:red">你好</div>  
+<button id="go">click me1</button>
+<button id="stop">click me2</button>
+
+<p style="display:none;">hello world</p>
+<script>
+    $("#go").click(function () {
+        // $(".hah").animate({
+        //     height: "toggle",
+        //     opacity:"toggle"
+        // }, "slow");
+        $(".hah").animate({
+            height: "+50px",
+            opacity: "0.25"
+        }, "slow");
+        $("p").animate({
+            opacity: "show"
+        }, "slow");
+    })
+    $("#stop").click(function () {
+        $(".hah").stop();
+        $("p").stop();
+    });
+</script>
+</body>
+</html>
