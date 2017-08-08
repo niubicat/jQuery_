@@ -395,7 +395,118 @@
         data:mousedown([Data], fn) 可传入data供函数fn处理
         fn:在每一个匹配元素的mousedown事件中绑定的处理函数
 
-#### 27、
+#### 27、mouseenter([[data],fn]) 当鼠标指针穿过元素时，会发生 mouseenter 事件。
+    该事件大多数时候会与mouseleave 事件一起使用。
+    与 mouseover 事件不同，只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。
+    如果鼠标指针穿过任何子元素，同样会触发 mouseover 事件。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的mouseenter事件中绑定的处理函数。
+    * 2）[data],fn
+        data:mouseenter([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的mouseenter事件中绑定的处理函数。
+
+#### 28、mouseleave([[data],fn]) 当鼠标指针离开元素时，会发生 mouseleave 事件。
+    该事件大多数时候会与mouseenter 事件一起使用。
+    与 mouseout 事件不同，只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件。
+    如果鼠标指针离开任何子元素，同样会触发 mouseout 事件。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的mouseleave事件中绑定的处理函数。
+    * 2）[data],fn
+        data:mouseleave([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的mouseleave事件中绑定的处理函数。
+
+#### 29、mousemove([[data],fn]) 当鼠标指针在指定的元素中移动时，就会发生 mousemove 事件。
+    mousemove事件处理函数会被传递一个变量——事件对象，其.clientX 和 .clientY 属性代表鼠标的坐标
+* 参数：
+    * 1）fn
+        在每一个匹配元素的mousemove事件中绑定的处理函数。
+    * 2）[data],fn 
+        data:mousemove([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的mousemove事件中绑定的处理函数。
+
+#### 30、mouseout([[data],fn]) 当鼠标指针从元素上移开时，发生 mouseout 事件。
+    注释：与 mouseleave 事件不同，不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件。
+    只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的mouseout事件中绑定的处理函数。
+    * 2） [data],fn
+        data:mouseout([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的mouseout事件中绑定的处理函数。
+    
+#### 31、mouseover([[data],fn]) 当鼠标指针位于元素上方时，会发生 mouseover 事件。
+    该事件大多数时候会与 mouseout 事件一起使用。
+    注释：与 mouseenter 事件不同，不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件。
+    只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。
+* 参数：
+    * 1）fn 
+        在每一个匹配元素的mouseover事件中绑定的处理函数。
+    * 2）[data],fn
+        data:mouseover([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的mouseover事件中绑定的处理函数。
+
+#### 32、mouseup([[data],fn]) 当在元素上放松鼠标按钮时，会发生 mouseup 事件。
+    与 click 事件不同，mouseup 事件仅需要放松按钮。当鼠标指针位于元素上方时，放松鼠标按钮就会触发该事件。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的mouseup事件中绑定的处理函数。
+    * 2）[data],fn
+        data:mouseup([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的mouseup事件中绑定的处理函数。
+
+#### 33、resize([[data],fn]) 当调整浏览器窗口的大小时，发生 resize 事件。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的resize事件中绑定的处理函数。
+    * 2）[data],fn
+        data:resize([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的resize事件中绑定的处理函数。
+
+#### 34、scroll[[data],fn] 当用户滚动指定的元素时，会发生 scroll 事件。
+    scroll 事件适用于所有可滚动的元素和 window 对象（浏览器窗口）。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的scroll事件中绑定的处理函数。
+    * 2）[data],fn
+        data:scroll([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的scroll事件中绑定的处理函数。
+    
+#### 35、select([[data],fn]) 当 textarea 或文本类型的 input 元素中的文本被选择时，会发生 select 事件。
+    这个函数会调用执行绑定到select事件的所有函数，包括浏览器的默认行为。
+    可以通过在某个绑定的函数中返回false来防止触发浏览器的默认行为。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的select事件中绑定的处理函数。
+    * 2）[data],fn 
+        data:select([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的select事件中绑定的处理函数。
+
+#### 36、submit([[data],fn]) 当提交表单时，会发生 submit 事件。
+    该事件只适用于表单元素。
+* 参数：
+    * 1）fn
+        在每一个匹配元素的submit事件中绑定的处理函数。
+    * 2）[data],fn
+        data:submit([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的submit事件中绑定的处理函数。
+
+#### 37、unload([[data],fn]) 在当用户离开页面时，会发生 unload 事件。
+    具体来说，当发生以下情况时，会发出 unload 事件：
+    1、点击某个离开页面的链接
+    2、在地址栏中键入了新的 URL
+    3、使用前进或后退按钮
+    4、关闭浏览器
+    5、重新加载页面
+* 参数：
+    * 1）fn
+        在每一个匹配元素的unload事件中绑定的处理函数
+    * 2）[data],fn
+        data:unload([Data], fn) 可传入data供函数fn处理。
+        fn:在每一个匹配元素的unload事件中绑定的处理函数。
+        
+
 
 
 
