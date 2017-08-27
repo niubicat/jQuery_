@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工具</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script>
+    $(function () {
+        // 例遍数组，同时使用元素索引和内容。
+        $.each( [0, 1, 2], function (i, n) {
+            alert("Item #" + i + ":" + n);
+        })
+        // 例遍对象，同时使用成员名称和变量内容。
+        $.each( { name: "John", lang: "JS" }, function(i, n){
+            alert( "Name: " + i + ", Value: " + n );
+        });
+    })
+</script>
+</body>
+</html>

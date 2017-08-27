@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工具</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script>
+    $(function () {
+        // 合并 settings 和 options，修改并返回 settings。
+        var settings = {
+            validate: false,
+            limit: 5,
+            name: "foo"
+        };
+        var options = {
+            validate: true,
+            name: "bar"
+        };
+        jQuery.extend(settings, options) // settings == { validate: true, limit: 5, name: "bar" }
+
+        // 合并 defaults 和 options, 不修改 defaults。
+        var empty = {};
+        var defaults = {
+            validate: false,
+            limit:5,
+            name: "foo"
+        };
+        var options = { 
+            validate: true, 
+            name: "bar" 
+        };
+        var settings = jQuery.extend(empty, defaults, options)
+        // 输出 settings == { validate: true, limit: 5, name: "bar" }
+        // 输出 empty == { validate: true, limit: 5, name: "bar" }
+    })
+</script>  
+</body>
+</html>

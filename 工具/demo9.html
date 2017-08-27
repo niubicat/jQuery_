@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工具</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script>
+    $(function () {
+        $.when($.ajax("/page1.php"), $.ajax("/page2.php")).done(function(a1,  a2){
+            /* a1 and a2 are arguments resolved for the 
+                page1 and page2 ajax requests, respectively */
+            var jqXHR = a1[2]; /* arguments are [ "success", statusText, jqXHR ] */
+            if ( /Whip It/.test(jqXHR.responseText) ) {
+                alert("First page has 'Whip It' somewhere.");
+            }
+        });
+
+        $.when($.ajax("/page1.php"), $.ajax("/page2.php"))
+            .then(myFunc, myFailure);
+    })
+</script>  
+</body>
+</html>

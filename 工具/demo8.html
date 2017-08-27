@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工具</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script>
+    // 添加一个jQuery的方法，以便它不会受到外部分
+    (function () {
+        var sub$ = jQuery.sub();
+        sub$.fn.myCusomMethod = function () {
+            return "just for me";
+        };
+
+        sub$(document).ready(function () {
+            sub$("body s").myCusomMethod(); // just for me
+        })
+    })();
+    typeof jQuery("body").myCusomMethod(); // undefined
+    
+    // 改写一些jQuery的方法，以提供新的功能。
+    (function () {
+        var myjQuery = jQuery.sub();
+
+        myjQuery.fn.remove = function() {
+            // New functionality: Trigger a remove event
+            this.trigger("remove");
+
+            // Be sure to call the original jQuery remove method
+            return jQuery.fn.remove.apply( this, arguments );
+        };
+
+        myjQuery(function($) {
+            $(".menu").click(function() {
+            $(this).find(".submenu").remove();
+            });
+
+            // A new remove event is now triggered from this copy of jQuery
+            $(document).bind("remove", function(e) {
+            $(e.target).parent().hide();
+            });
+        });
+    })();
+
+    // 创建一个插件，它返回插件的具体办法。
+    (function() {
+    // Create a new copy of jQuery using sub()
+    var plugin = jQuery.sub();
+
+    // Extend that copy with the new plugin methods
+    plugin.fn.extend({
+        open: function() {
+        return this.show();
+        },
+        close: function() {
+        return this.hide();
+        }
+    });
+
+    // Add our plugin to the original jQuery
+    jQuery.fn.myplugin = function() {
+        this.addClass("plugin");
+
+        // Make sure our plugin returns our special plugin version of jQuery
+        return plugin( this );
+    };
+    })();
+
+    $(document).ready(function() {
+        // Call the plugin, open method now exists
+        $('#main').myplugin().open();
+
+        // Note: Calling just $("#main").open() won't work as open doesn't exist!
+    });
+</script>  
+</body>
+</html>
