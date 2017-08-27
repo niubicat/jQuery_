@@ -174,4 +174,87 @@
     * 2）array
         待处理数组。
 
-#### 13、jQuery.toArray()  
+#### 13、jQuery.toArray()  把jQuery集合中所有DOM元素恢复成一个数组。
+* 参数：
+    * 1）无
+
+#### 14、jQuery.merge(first, second) 合并两个数组
+    返回的结果会修改第一个数组的内容——第一个数组的元素后面跟着第二个数组的元素。
+    要去除重复项，请使用$.unique()
+* 参数：
+    * 1）first, second 
+        first:第一个待处理数组，会改变其中的元素。
+        second:第二个待处理数组，不会改变其中的元素。
+
+#### 15、jQuery.unique(array) 删除数组中重复元素。只处理删除DOM元素数组，而不能处理字符串或者数字数组。[3.0-]
+    在jQuery 3.0以上版本该方法已被弃用，请使用 jQuery.uniqueSort()方法
+* 参数：
+    * 1）array 
+        待处理的数组
+        
+#### 16、jQuery.uniqueSort(array) 通过搜索的数组对象，排序数组，并移除任何重复的节点。[3.0+]
+    如果一个节点和已经在数组中的节点完全相同，那么它被认为是重复的; 
+    两个不同的节点具有相同的属性是被认为不重复的。 
+    此功能只适用于普通的JavaScript DOM元素的数组，主要是jQuery内部使用。你可能永远都不需要使用它。
+* 参数：
+    * 1）array
+        待处理数组
+
+#### 17、jQuery.parseJSON(str) 接受一个JSON字符串，返回解析后的对象。[3.0-]
+    在jQuery 3.0 及以后版本中，该方法已被删除，请使用原生方法 JSON.parse(str)
+    传入一个畸形的JSON字符串会抛出一个异常。比如下面的都是畸形的JSON字符串：
+    {test: 1} （ test 没有包围双引号）
+    {'test': 1} （使用了单引号而不是双引号）
+
+    另外，如果你什么都不传入，或者一个空字符串、null或undefined，parseJSON都会返回 null 。
+* 参数：
+    * 1）json
+        要解析的JSON字符串
+
+#### 18、jQuery.parseXML(data) 解析一个字符串到一个XML文件。
+    jQuery.parseXML使用原生解析函数浏览器创建一个有效的XML文档。
+    这文档可以被传递给jQuery创建一个典型的jQuery对象，可以查询及操作。
+* 参数：
+    * 1）data
+        用来解析的格式良好的XML字符串。
+
+#### 19、jQuery.noop 一个空函数
+    当你仅仅想要传递一个空函数的时候，就用他吧。这对一些插件作者很有用，当插件提供了一个可选的回调函数接口，那么如果调用的时候没有传递这个回调函数，就用jQuery.noop来代替执行。
+* 参数：
+    * 1）无
+
+#### 20、jQuery.proxy(fn, context) jQuery 1.4 新增。返回一个新函数，并且这个函数始终保持了特定的作用域。
+    当有事件处理函数要附加到元素上，但他们的作用域实际是指向另一个对象时，这个方法最有用了。
+    此外，最妙的是，jQuery能够确保即便你绑定的函数是经过jQuery.proxy()处理过的函数，
+    你依然可以传递原先的函数来准确无误地取消绑定。
+
+    这个函数还有另一种用法，jQuery.proxy( scope, name )。第一个参数是要设定的作用域对象。
+    第二个参数是将要设置作用域的函数名（必须是第一个作用域对象的一个属性）。
+* 参数：
+    * 1）function, context
+        function:将要被改变作用域的函数
+        context:一个object，那个函数的作用域会被设置到这个object上来。
+    * 2）context, name
+        context:一个object，那个函数的作用域会被设置到这个object上来。
+        name：改变上下文中的函数名(这个函数必须是前一个参数 'context' 对象的属性)
+
+#### 21、jQuery.contains(container, contained) 一个DOM节点是否包含另一个DOM节点。
+* 参数：
+    * 1）container,contained
+        container:DOM元素作为容器，可以包含其他元素
+        contained:DOM节点，可能被其他元素所包含
+
+#### 22、jQuery.type(obj) 检测obj的数据类型。
+* 参数：
+    * 1）obj
+        用于测试类型的对象
+    
+#### 23、jQuery.isArray(obj) jQuery 1.3 新增。测试对象是否为数组。[3.2-]
+    jQuery 3.2中已废弃
+* 参数：
+    * 1）obj
+        用于测试是否为数组的对象
+
+#### 24、
+
+
