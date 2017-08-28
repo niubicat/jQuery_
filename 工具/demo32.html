@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工具</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script>
+    $(function () {
+        // 判断一个对象是否是 jQuery 对象。
+        var a = { 
+            what: "a regular js object"
+        };
+        var b = $('body');
+
+        if ( a.jquery ) { // falsy, since it's undefined
+            alert(' a is a jQuery object! ');
+        }    
+        if ( b.jquery ) { // truthy, since it's a string
+            alert(' b is a jQuery object! ');
+        }
+
+        // 取得页面上当前使用的 jQuery 的版本号。
+        alert( 'You are running jQuery version: ' + $.fn.jquery );
+    })
+</script>
+</body>
+</html>

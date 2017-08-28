@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工具</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script>
+    $(function () {
+        // var params = {
+        //     width: 1680,
+        //     height: 1050
+        // }
+        // var str = $.param(params)
+        // alert(str);
+
+        var myObj = {
+            a: {
+                one: 1,
+                two: 2,
+                three: 3
+            },
+            b: [1, 2, 3]
+        };
+        var recursiverEncoded = $.param(myObj);
+        var recursiverDecoded =  decodeURIComponent($.param(myObj));
+        alert(recursiverEncoded);
+        alert(recursiverDecoded);
+
+        var shallowEncoded = $.param(myObj, true);
+        var shallowDecoded = decodeURIComponent(shallowEncoded);
+
+        alert(shallowEncoded);
+        alert(shallowDecoded);
+    })
+</script>
+</body>
+</html>

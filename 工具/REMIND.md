@@ -255,6 +255,69 @@
     * 1）obj
         用于测试是否为数组的对象
 
-#### 24、
+#### 24、jQuery.isFunction(obj) 测试对象是否为函数。
+    jQuery 1.3以后，在IE浏览器里，浏览器提供的函数比如'alert'还有 DOM 元素的方法,
+    比如 'getAttribute' 将不认为是函数
+* 参数：
+    * 1）obj
+        用于测试是否为函数的对象
 
+#### 25、jQuery.isEmptyObject(obj) jQuery 1.4 新增。测试对象是否是空对象（不包含任何属性）。
+    jQuery 1.4 中，这个方法既检测对象本身的属性，也检测从原型继承的属性（因此没有使用hasOwnProperty）。
+* 参数：
+    * 1）obj 
+        用于测试是否为空对象
+    
+#### 26、jQuery.isPlainObject(obj) 测试对象是否是纯粹的对象（通过 "{}" 或者 "new Object" 创建的）。
+* 参数：
+    * 1）obj 
+        用于测试是否为纯粹的对象
+
+#### 27、jQuery.isWindow(obj) 测试对象是否是窗口（有可能是Frame）。
+* 参数：
+    * 1）obj
+        用于测试是否为窗口的对象
+
+#### 28、jQuery.isNumberic(value) 确定它的参数是否是一个数字。[1.7+]
+    $.isNumeric() 方法检查它的参数是否代表一个数值。如果是这样，它返回 true。否则，它返回false。该参数可以是任何类型的
+* 参数：
+    * 1）value
+        用于测试的值。
+    
+#### 29、jQuery.trim(str) 去掉字符串起始和结尾的空格。
+* 参数：
+    * 1）str
+        需要处理的字符串
+    
+#### 30、jQuery.param(obj, [traditional]) 将表单元素数组或者对象序列化。是.serialize()的核心方法。
+    在jQuery 1.3中，如果传递的参数是一个函数，那么用.param()会得到这个函数的返回值，
+    而不是把这个函数作为一个字符串来返回。
+
+    在jQuery 1.4中，.param()会深度递归一个对象来满足现在脚本语言和框架，
+    比如PHP， Ruby on Rails等。你可以通过jQuery.ajaxSettings.traditional = true; 来全局得禁用这个功能。
+
+    注意：因为有些框架在解析序列化数字的时候能力有限，
+    所以当传递一些含有嵌套对象、数组的对象作为参数时，请务必小心！
+
+    在jQuery 1.4中，HTML5的input元素也会被序列化。
+* 参数：
+    * 1）obj
+        数组或jQuery对象会按照name/value对进行序列化，普通对象按照key/value对进行序列化。
+    * 2）obj, [traditional]
+        obj:数组或jQuery对象会按照name/value对进行序列化，普通对象按照key/value对进行序列化。
+        traditional:是否使用传统的方式浅层序列化。
+
+#### 31、jQuery.error(message) 接受一个字符串，并且直接抛出一个包含这个字符串的异常。
+    这个方法的主要目的是提供给插件开发人员，让他们可以重载这个方法，
+    并以更好的方式显示错误，或者提供更多信息。
+* 参数：
+    * 1) message
+        要抛出的消息
+
+#### 32、jQuery.fn.jquery 代表 jQuery 版本号的字符串。
+    .jquery 属性是通过 jQuery 原型赋值的，通过使用它的别名 $.fn 进行引用。
+    它是一个含有 jQuery 版本号的字符串，例如 "1.5.0" 或 "1.4.4".
+* 参数：
+    * 1）无
+    
 
