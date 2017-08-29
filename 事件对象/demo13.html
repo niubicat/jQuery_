@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件对象</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<style>
+    p { 
+        height: 30px; 
+        width: 150px; 
+        background-color: #ccf; 
+    }
+    div {
+        height: 30px; 
+        width: 150px; 
+        background-color: #cfc; 
+    }  
+</style>
+<p>paragraph</p>
+<div>division</div>
+<script>    
+$("p").click(function(event){
+    event.stopImmediatePropagation();
+}); 
+
+$("p").click(function(event){
+    // This function won't be executed
+    $(this).css("background-color", "#f00");  
+});
+
+$("div").click(function(event) {
+    // This function will be executed
+    $(this).css("background-color", "#f00");
+});
+</script>
+</body>
+</html>

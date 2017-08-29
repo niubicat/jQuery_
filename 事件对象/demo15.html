@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件对象</title>
+    <script src="./jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<style>
+    span, 
+    strong, 
+    p {     
+        padding: 8px; 
+        display: block; 
+        border: 1px solid #999;  
+    }
+</style>
+<div id="log"></div>
+<div>
+    <p>
+        <strong>
+            <span>click me</span>
+        </strong>
+    </p>
+</div>
+<script>
+    $("body").click(function (e) {
+        $("#log").html("clicked:" + e.target.nodeName);
+    })
+</script>
+</body>
+</html>
